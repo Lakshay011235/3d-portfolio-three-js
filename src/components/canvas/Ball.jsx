@@ -13,7 +13,7 @@ import CanvasLoader from "../Loader";
 const Ball = (props) => {
     const [decal] = useTexture([props.imgUrl]);
     return (
-        <Float speed={7} rotationIntensity={0.2} floatIntensity={3}>
+        <Float speed={1} rotationIntensity={2} floatIntensity={3}>
             <ambientLight intensity={0.25} />
             <directionalLight position={[0, 0, 0.05]} />
             <mesh castShadow receiveShadow scale={2.75}>
@@ -37,8 +37,6 @@ const BallCanvas = ({ icon }) => {
                     // autoRotateSpeed={500}
                     // rotateSpeed={5}
                 />
-                {/* <hemisphereLight intensity={0.25} /> */}
-                {/* <directionalLight position={[0, 0, 0.05]} intensity={0.5}/> */}
                 <Ball imgUrl={icon} />
             </Suspense>
 
